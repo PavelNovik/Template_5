@@ -14,24 +14,46 @@ body {
 
 .header__title {
   @include titleText(4.8rem, $mainWhite);
+  &_text {
+    @include titleText(3rem, $mainWhite);
+    font-weight: 300;
+  }
 }
 .section__title {
-  &_black {
+  &-black {
     @include titleText;
   }
-  &_white {
+  &_text-black {
+    @include titleText(2rem);
+  }
+  &-white {
     @include titleText(3.6rem, $mainWhite);
+  }
+  &_text-white {
+    @include titleText(2rem, $mainWhite);
   }
 }
 .work__title {
   @include titleText(2.6rem, $mainWhite);
+  &_text {
+    @include titleText(1.6rem, $mainWhite);
+  }
 }
 .about__title {
   @include titleText(2.2rem, $mainBlack);
+  &_text {
+    font-family: $articleFont;
+    color: $mainGrey;
+    font-size: 1.4rem;
+  }
 }
 .step__title {
   @extend #smallTitle;
   font-size: 1.8rem;
-
   color: $mainBlack;
+  &_text {
+    font-family: $articleFont;
+    color: $secondGrey;
+    font-size: 1.4rem;
+  }
 }
