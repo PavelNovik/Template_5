@@ -1,0 +1,29 @@
+{
+  "name": "template_5",
+  "version": "1.0.0",
+  "description": "This is my learning JS HTML CSS\r Template 5\r 28.10.2022 11.15 workbook",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html --open --port 1116",
+    "kit": "parcel src/uikit.html --open --port 1115",
+    "build:uikit": "rm -rf build/uikit && parcel build src/uikit.html --out-dir build/uikit",
+    "build": "rm -rf build/uikit && parcel build src/index.html --out-dir build/prod",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PavelNovik/Template_5.git"
+  },
+  "keywords": [],
+  "author": "Pawel Nowik <brn2befree@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PavelNovik/Template_5/issues"
+  },
+  "homepage": "https://github.com/PavelNovik/Template_5#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.3.1",
+    "sass": "^1.55.0",
+    "vercel": "^19.1.2"
+  }
+}
