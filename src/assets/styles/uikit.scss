@@ -1,0 +1,37 @@
+@import './index.scss';
+
+body {
+  background-color: rgb(162, 166, 167);
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+.uikit__title {
+  color: white;
+  font-size: 3rem;
+  opacity: 0.8;
+  text-transform: capitalize;
+}
+
+.header__title {
+  @include titleText(4.8rem, $mainWhite);
+}
+.section__title {
+  &_black {
+    @include titleText;
+  }
+  &_white {
+    @include titleText(3.6rem, $mainWhite);
+  }
+}
+.work__title {
+  @include titleText(2.6rem, $mainWhite);
+}
+.about__title {
+  @include titleText(2.2rem, $mainBlack);
+}
+.step__title {
+  @extend #smallTitle;
+  font-size: 1.8rem;
+
+  color: $mainBlack;
+}
