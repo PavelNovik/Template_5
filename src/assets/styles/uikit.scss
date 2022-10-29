@@ -5,6 +5,11 @@ body {
   margin-left: 2rem;
   margin-top: 2rem;
 }
+
+hr {
+  width: 30%;
+}
+
 .uikit__title {
   color: white;
   font-size: 3rem;
@@ -14,46 +19,151 @@ body {
 
 .header__title {
   @include titleText(4.8rem, $mainWhite);
+
+
   &_text {
     @include titleText(3rem, $mainWhite);
     font-weight: 300;
   }
 }
+
 .section__title {
   &-black {
     @include titleText;
   }
+
   &_text-black {
     @include titleText(2rem);
+    // font-weight: 300;
   }
+
   &-white {
     @include titleText(3.6rem, $mainWhite);
   }
+
   &_text-white {
     @include titleText(2rem, $mainWhite);
+    font-weight: 300;
   }
 }
+
 .work__title {
   @include titleText(2.6rem, $mainWhite);
+
   &_text {
     @include titleText(1.6rem, $mainWhite);
   }
 }
+
 .about__title {
   @include titleText(2.2rem, $mainBlack);
+
   &_text {
     font-family: $articleFont;
     color: $mainGrey;
     font-size: 1.4rem;
   }
 }
+
 .step__title {
-  @extend #smallTitle;
+  @extend %smallTitle;
   font-size: 1.8rem;
   color: $mainBlack;
+
   &_text {
     font-family: $articleFont;
     color: $secondGrey;
     font-size: 1.4rem;
+  }
+}
+
+.counter__title {
+  font-family: $countFont;
+  font-size: 6rem;
+  font-weight: 300;
+  color: $mainWhite;
+
+}
+
+.logos {
+
+  .fas,
+  .far {
+    @include fontAwesome(3rem, $mainWhite);
+    margin-left: 2rem;
+
+  }
+
+
+}
+
+.material-symbols-outlined {
+  font-size: 4rem;
+  color: $mainWhite;
+  font-weight: 100;
+  margin-left: 1rem;
+}
+
+.material-icons-outlined {
+  margin-left: 1rem;
+  font-family: $mainIcons;
+  font-size: 4rem;
+  color: $mainWhite;
+}
+
+.press {
+  font-family: $socIco;
+  font-size: 6rem;
+  color: $mainWhite;
+  margin-left: 1rem;
+  // &:after {
+  //   content: "\f007";
+  //   font-family: "Font Awesome 5 Free";
+  //   font-weight: 900;
+  //   color: red;
+  //   font-size: 5rem;
+  // }
+
+  // &::before {
+  //   font-family: "Font Awesome 5 Free";
+  //   font-weight: 400;
+  //   font-size: 5rem;
+  //   content: "\f1ea";
+  //   color: blue;
+  // }
+}
+
+.logo {
+  display: flex;
+
+  &__icon {
+    .fas {
+      @include fontAwesome(5.7rem, $mainRed);
+    }
+
+    margin-right: 1rem;
+  }
+
+  &__title {
+    @include titleText (3.7rem, $mainBlack);
+    text-transform: capitalize;
+  }
+
+  &__text {
+    @extend %smallTitle;
+    font-size: 1.5rem;
+  }
+}
+
+.navigation {
+  &__menu {
+    ul {
+      list-style: none;
+    }
+  }
+
+  &__btn {
+    background-color: $mainRed;
+    color: $mainWhite;
   }
 }

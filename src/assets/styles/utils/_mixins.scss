@@ -2,9 +2,14 @@
   font-size: $fs;
   color: $color;
   font-family: $mainFont;
-  // letter-spacing: 2px;
 }
 
-#smallTitle {
-  font-family: $approachFont;
+@mixin fontAwesome ($fs: 1.9rem, $color: $mainBlack) {
+  font-size: $fs;
+  color: $color;
+}
+
+%smallTitle {
+  font-family: $mainFont;
+  font-weight: normal;
 }
