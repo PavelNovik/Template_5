@@ -25,6 +25,21 @@ hr {
     @include titleText(3rem, $mainWhite);
     font-weight: 300;
   }
+
+  &_btn {
+    width: 33rem;
+    height: 6.9rem;
+    padding: 2.2rem 4.5rem;
+    border-radius: 0.5rem;
+    @include titleText(2.4rem, $mainWhite);
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: $btnYellow;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
 
 .section__title {
@@ -156,14 +171,125 @@ hr {
 }
 
 .navigation {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+
   &__menu {
-    ul {
-      list-style: none;
+    &_list {
+      display: flex;
+      flex-direction: row;
+      gap: 3rem;
+
+      li {
+        // &:first-child {
+        //   list-style: none;
+        // }
+
+        @extend %smallTitle;
+        font-size: 1.5rem;
+        color: $mainBlack;
+        text-transform: capitalize;
+        font-weight: bold;
+
+        &:hover {
+          cursor: pointer;
+          color: $mainRed;
+          list-style: none;
+        }
+      }
     }
   }
 
   &__btn {
+    width: 17.1rem;
+    height: 3.6rem;
+    border-radius: 0.4rem;
     background-color: $mainRed;
     color: $mainWhite;
+    text-align: center;
+    @extend %smallTitle;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding: 0.9rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.about__feature {
+  width: 25rem;
+  height: 20.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: $mainWhite;
+
+  img {
+    width: 8.3rem;
+    height: 7.9rem;
+    margin-bottom: 2.4rem;
+  }
+
+  h3 {
+    margin-bottom: 1.4rem;
+  }
+
+  p {
+    line-height: 1.57;
+  }
+}
+
+.approch {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 102.1rem;
+  height: 23.6rem;
+  background-color: $mainWhite;
+  border-radius: 0.4rem;
+  overflow: hidden;
+
+  &__img {
+    width: 35.2rem;
+    height: 23.6rem;
+  }
+
+  &__text {
+    width: 52rem;
+    margin-right: 7.2rem;
+
+    h4 {
+      font-weight: bold;
+      margin-bottom: 1.3rem;
+    }
+  }
+
+  &__step {
+    position: absolute;
+    left: 28.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 10.1rem;
+    height: 10.1rem;
+    background-color: $mainRed;
+    border: 2px solid $mainWhite;
+    border-radius: 0.5rem;
+
+
+    p {
+      @extend %smallTitle;
+      font-size: 2rem;
+      color: $mainWhite;
+      transform: translateY(-1.5rem);
+    }
   }
 }
