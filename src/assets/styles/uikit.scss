@@ -101,7 +101,6 @@ hr {
 }
 
 .logos {
-
   .fas,
   .far {
     @include fontAwesome(3rem, $mainWhite);
@@ -288,6 +287,7 @@ hr {
 
     p {
       @extend %smallTitle;
+      font-family: $countFont;
       font-size: 2rem;
       color: $mainWhite;
       transform: translateY(-1.5rem);
@@ -397,6 +397,20 @@ hr {
       margin-bottom: 1rem;
       border: solid 1px #d8d8d8;
       border-radius: 0.3rem;
+      font-family: $mainFont;
+      font-size: 1.4rem;
+      text-transform: capitalize;
+      &:focus {
+        // border: 1px solid rgba($color: #1287bf, $alpha: 0.6);
+        // border-color: rgba($color: #1287bf, $alpha: 0.6);
+        outline: 1px solid rgba($color: #1287bf, $alpha: 0.8);
+        box-shadow: 0rem 0rem 0.5rem #1287bf;
+      }
+
+      &::placeholder {
+        color: rgba($lightGrey, 0.8);
+        padding-left: 2rem;
+      }
 
       &:last-child {
         height: 4.6rem;
@@ -416,6 +430,4 @@ hr {
       }
     }
   }
-
-
 }
