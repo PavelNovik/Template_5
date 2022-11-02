@@ -431,3 +431,57 @@ hr {
     }
   }
 }
+
+.footer {
+  &__icon {
+    width: 4.5rem;
+    height: 4.5rem;
+    padding: 1rem 0.6rem;
+    border-radius: 0.4rem;
+    border: solid 2px #515151;
+    background-color: #2a2a2a;
+    p {
+      font-size: 3rem;
+    }
+
+    &:hover {
+      border-color: $mainRed;
+      cursor: pointer;
+    }
+  }
+  &__input {
+    width: 683px;
+    height: 54px;
+    background-color: #515151;
+    border: none;
+    border-radius: 0.2rem;
+    padding-left: 2.2rem;
+    font-family: $articleFont;
+    font-size: 1.6rem;
+    color: $mainWhite;
+    outline: none;
+    &::placeholder {
+      color: #cecece;
+      font-family: $articleFont;
+      font-size: 1.4rem;
+      opacity: 0.8;
+      text-transform: capitalize;
+    }
+  }
+
+  &__btn {
+    width: 149px;
+    height: 49px;
+    border-radius: 0.4rem;
+    border: solid 2px #515151;
+    background-color: #2a2a2a;
+    font-family: $mainFont;
+    color: $mainWhite;
+    text-transform: capitalize;
+    font-size: 1.7rem;
+    &:hover {
+      cursor: pointer;
+      border-color: $mainRed;
+    }
+  }
+}
