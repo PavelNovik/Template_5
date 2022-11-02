@@ -1,3 +1,9 @@
 @import './utils';
 @import './components';
 @import './layouts';
+
+.container {
+    width: 100%;
+    max-width: 142rem;
+    margin: 0 auto;
+}
