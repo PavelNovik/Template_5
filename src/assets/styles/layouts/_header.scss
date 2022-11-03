@@ -1,44 +1,104 @@
 .header {
-    &__contacts {
-        width: 100%;
-        height: 2.8rem;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: flex-end;
-        background-color: #f0f2f4;
-        box-shadow: 0px 1px 0 0 #e2e2e2;
+  &__contacts {
+    width: 100%;
+    height: 2.8rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    background-color: #f0f2f4;
+    box-shadow: 0px 1px 0 0 #e2e2e2;
+    font-size: 1rem;
 
-        @media ($tablet) {
-            height: 4rem;
-            justify-content: flex-end;
-            align-items: flex-end;
-        }
-
-        @media ($desktop) {
-            height: 5.6rem;
-        }
-
-
-        .fas {
-            font-size: 2.4rem;
-            color: $mainBlack;
-        }
-
-        &_phone {
-            display: flex;
-            border-right: 0.1rem solid rgba($color: #e2e2e2, $alpha: 1);
-            color: $mainBlack;
-        }
-
-        &_email {
-            display: flex;
-        }
-
-        &_social {
-            width: 2.6rem;
-            height: 2.6rem;
-            background-color: #1287bf;
-            border-radius: 0.3rem;
-        }
+    @media ($tablet) {
+      height: 4rem;
+      justify-content: flex-end;
+      align-items: flex-end;
+      font-size: 1.5rem;
     }
+
+    @media ($desktop) {
+      height: 5.6rem;
+    }
+
+    .fas {
+      font-size: 1.4rem;
+      color: $mainBlack;
+      @media ($tablet) {
+        font-size: 2.4rem;
+      }
+    }
+
+    &_phone {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      flex-shrink: 1;
+      border-right: 0.1rem solid rgba($color: #e2e2e2, $alpha: 1);
+      color: $mainBlack;
+      font-family: $mainFont;
+      @media ($tablet) {
+        margin-right: 2rem;
+        margin-bottom: 0.6rem;
+        padding-right: 1.9rem;
+      }
+      @media ($desktop) {
+        margin-right: 2rem;
+        margin-bottom: 1.2rem;
+        padding-right: 1.9rem;
+      }
+    }
+
+    &_email {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      flex-shrink: 1;
+      color: $mainBlack;
+      font-family: $mainFont;
+      @media ($tablet) {
+        margin-right: 1.2rem;
+        margin-bottom: 0.6rem;
+      }
+      @media ($desktop) {
+        margin-right: 1.2rem;
+        margin-bottom: 1.2rem;
+      }
+    }
+
+    &_social {
+      width: 2rem;
+      height: 2rem;
+      background-color: #1287bf;
+      border-radius: 0.3rem;
+      display: flex;
+      justify-content: center;
+      flex-shrink: 0;
+      @media ($tablet) {
+        width: 2.6rem;
+        height: 2.6rem;
+        margin-right: 9rem;
+        margin-bottom: 0.6rem;
+      }
+      @media ($desktop) {
+        margin-right: 19rem;
+        margin-bottom: 1.2rem;
+      }
+
+      &-icon {
+        margin-top: calc((100% - 1.5rem) / 2);
+        font-family: $socIco;
+        text-decoration: none;
+        font-size: 2rem;
+        color: $mainWhite;
+        @media ($tablet) {
+          margin-top: calc((100% - 1.9rem) / 2);
+          font-size: 2.6rem;
+        }
+      }
+    }
+  }
+  &__title {
+    width: 100%;
+    height: 13rem;
+  }
 }
