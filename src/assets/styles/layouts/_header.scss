@@ -1,104 +1,296 @@
 .header {
-  &__contacts {
-    width: 100%;
-    height: 2.8rem;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-end;
-    background-color: #f0f2f4;
-    box-shadow: 0px 1px 0 0 #e2e2e2;
-    font-size: 1rem;
+    &__contacts {
+        width: 100%;
+        height: 2.8rem;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: #f0f2f4;
+        box-shadow: 0px 1px 0 0 #e2e2e2;
+        font-size: 1rem;
 
-    @media ($tablet) {
-      height: 4rem;
-      justify-content: flex-end;
-      align-items: flex-end;
-      font-size: 1.5rem;
-    }
-
-    @media ($desktop) {
-      height: 5.6rem;
-    }
-
-    .fas {
-      font-size: 1.4rem;
-      color: $mainBlack;
-      @media ($tablet) {
-        font-size: 2.4rem;
-      }
-    }
-
-    &_phone {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      flex-shrink: 1;
-      border-right: 0.1rem solid rgba($color: #e2e2e2, $alpha: 1);
-      color: $mainBlack;
-      font-family: $mainFont;
-      @media ($tablet) {
-        margin-right: 2rem;
-        margin-bottom: 0.6rem;
-        padding-right: 1.9rem;
-      }
-      @media ($desktop) {
-        margin-right: 2rem;
-        margin-bottom: 1.2rem;
-        padding-right: 1.9rem;
-      }
-    }
-
-    &_email {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      flex-shrink: 1;
-      color: $mainBlack;
-      font-family: $mainFont;
-      @media ($tablet) {
-        margin-right: 1.2rem;
-        margin-bottom: 0.6rem;
-      }
-      @media ($desktop) {
-        margin-right: 1.2rem;
-        margin-bottom: 1.2rem;
-      }
-    }
-
-    &_social {
-      width: 2rem;
-      height: 2rem;
-      background-color: #1287bf;
-      border-radius: 0.3rem;
-      display: flex;
-      justify-content: center;
-      flex-shrink: 0;
-      @media ($tablet) {
-        width: 2.6rem;
-        height: 2.6rem;
-        margin-right: 9rem;
-        margin-bottom: 0.6rem;
-      }
-      @media ($desktop) {
-        margin-right: 19rem;
-        margin-bottom: 1.2rem;
-      }
-
-      &-icon {
-        margin-top: calc((100% - 1.5rem) / 2);
-        font-family: $socIco;
-        text-decoration: none;
-        font-size: 2rem;
-        color: $mainWhite;
         @media ($tablet) {
-          margin-top: calc((100% - 1.9rem) / 2);
-          font-size: 2.6rem;
+            height: 4rem;
+            justify-content: flex-end;
+            align-items: flex-end;
+            font-size: 1.5rem;
         }
-      }
+
+        @media ($desktop) {
+            height: 5.6rem;
+        }
+
+        .fas {
+            font-size: 1.4rem;
+            color: $mainBlack;
+
+            @media ($tablet) {
+                font-size: 2.4rem;
+            }
+        }
+
+        &_phone {
+            display: inherit;
+            align-items: center;
+            gap: 0.8rem;
+            flex-shrink: 1;
+            border-right: 0.1rem solid rgba($color: #e2e2e2, $alpha: 1);
+            color: $mainBlack;
+            font-family: $mainFont;
+
+            @media ($tablet) {
+                margin-right: 2rem;
+                margin-bottom: 0.6rem;
+                padding-right: 1.9rem;
+            }
+
+            @media ($desktop) {
+                margin-right: 2rem;
+                margin-bottom: 1.2rem;
+                padding-right: 1.9rem;
+            }
+        }
+
+        &_email {
+            display: inherit;
+            align-items: center;
+            gap: 0.8rem;
+            flex-shrink: 1;
+            color: $mainBlack;
+            font-family: $mainFont;
+
+            @media ($tablet) {
+                margin-right: 1.2rem;
+                margin-bottom: 0.6rem;
+            }
+
+            @media ($desktop) {
+                margin-right: 1.2rem;
+                margin-bottom: 1.2rem;
+            }
+        }
+
+        &_social {
+            width: 2rem;
+            height: 2rem;
+            background-color: #1287bf;
+            border-radius: 0.3rem;
+            display: inherit;
+            justify-content: center;
+            flex-shrink: 0;
+
+            @media ($tablet) {
+                width: 2.6rem;
+                height: 2.6rem;
+                margin-right: 9rem;
+                margin-bottom: 0.6rem;
+            }
+
+            @media ($desktop) {
+                margin-right: 19rem;
+                margin-bottom: 1.2rem;
+            }
+
+            &-icon {
+                margin-top: calc((100% - 1.5rem) / 2);
+                font-family: $socIco;
+                text-decoration: none;
+                font-size: 2rem;
+                color: $mainWhite;
+
+                @media ($tablet) {
+                    margin-top: calc((100% - 1.9rem) / 2);
+                    font-size: 2.6rem;
+                }
+            }
+        }
     }
-  }
-  &__title {
-    width: 100%;
-    height: 13rem;
-  }
+
+    &__title {
+        width: 100%;
+        height: 10.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        justify-content: flex-start;
+
+        @media ($tablet) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        @media ($desktop) {
+            height: 13rem;
+
+        }
+
+        .logo {
+            display: flex;
+            margin-left: 1rem;
+            margin-top: 1rem;
+
+            @media ($tablet) {
+                margin-left: 9rem;
+                margin-top: 0;
+            }
+
+            @media ($desktop) {
+                margin-left: 19rem;
+
+            }
+
+            &__icon {
+                .fas {
+                    @include fontAwesome(3.7rem, $mainRed);
+
+                    @media ($tablet) {
+                        font-size: 4.7rem;
+                    }
+
+                    @media ($desktop) {
+                        font-size: 5.7rem;
+                    }
+                }
+
+                margin-right: .5rem;
+
+                @media ($tablet) {
+                    margin-right: 1rem;
+                }
+
+            }
+
+            &__title {
+                @include titleText(2rem, $mainBlack);
+                text-transform: capitalize;
+
+                @media ($tablet) {
+                    font-size: 2.7rem;
+                }
+
+                @media ($desktop) {
+                    font-size: 3.7rem;
+                }
+            }
+
+            &__text {
+                @extend %smallTitle;
+                font-size: 1rem;
+
+                @media ($tablet) {
+                    font-size: 1.2rem;
+                }
+
+                @media ($desktop) {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .5rem;
+
+        @media ($tablet) {
+            gap: 2.2rem;
+            flex-direction: row;
+        }
+
+        @media ($desktop) {
+            gap: 3.2rem;
+        }
+
+        &__menu {
+            &_list {
+                display: flex;
+                flex-direction: row;
+                gap: 2.5rem;
+
+                @media ($tablet) {
+                    gap: 3rem;
+                }
+
+                @media ($desktop) {
+                    gap: 3rem;
+                }
+
+                li {
+                    @extend %smallTitle;
+                    font-size: 1.1rem;
+                    color: $mainBlack;
+                    text-transform: capitalize;
+                    font-weight: bold;
+
+                    @media ($tablet) {
+                        font-size: 1.3rem;
+                    }
+
+                    @media ($desktop) {
+                        font-size: 1.5rem;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                        color: $mainRed;
+                        list-style: none;
+                    }
+                }
+            }
+        }
+
+        &__btn {
+            width: 13rem;
+            height: 2.6rem;
+            border-radius: 0.4rem;
+            background-color: $mainRed;
+            color: $mainWhite;
+            text-align: center;
+            @extend %smallTitle;
+            font-size: 1.3rem;
+            text-transform: capitalize;
+            font-weight: bold;
+            padding: 0.4rem;
+            margin-right: 1rem;
+
+            @media ($tablet) {
+                width: 17.1rem;
+                height: 3.6rem;
+                font-size: 1.5rem;
+                padding: 0.9rem;
+                margin-right: 9rem;
+            }
+
+            @media ($desktop) {
+                width: 17.1rem;
+                height: 3.6rem;
+                font-size: 1.5rem;
+                margin-right: 19rem;
+            }
+
+            &:hover {
+                cursor: pointer;
+                box-shadow: 2px 2px 10px $mainGrey;
+            }
+        }
+    }
+
+    .title {
+        width: 100%;
+        height: 29rem;
+        // background-image: url("../images/layer-32.webp");
+        background: url("../images/layer-32.webp");
+        background-size: cover;
+
+        @media ($tablet) {
+            height: 42rem;
+        }
+
+        @media ($desktop) {
+            height: 59rem;
+        }
+    }
 }
