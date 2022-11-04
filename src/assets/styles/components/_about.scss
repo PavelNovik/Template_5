@@ -1,0 +1,48 @@
+.about__features {
+  &_item {
+    width: 29rem;
+    height: 24.5rem;
+    padding: 2rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    // background-color: $mainWhite;
+    background-color: aqua;
+    border-radius: 0.5rem;
+    @media ($desktop) {
+      margin-right: 10rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    img {
+      width: 8.3rem;
+      height: 7.9rem;
+      margin-bottom: 2.4rem;
+    }
+
+    h3 {
+      margin-bottom: 1.2rem;
+    }
+
+    p {
+      width: 24rem;
+      height: 6.2rem;
+      overflow: hidden;
+      text-align: center;
+    }
+  }
+  &_header {
+    @include titleText(2.2rem, $mainBlack);
+  }
+  &_text {
+    font-family: $articleFont;
+    color: $mainGrey;
+    font-size: 1.4rem;
+    word-break: break-all;
+    line-height: 1.57;
+  }
+}

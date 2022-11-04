@@ -1,296 +1,366 @@
 .header {
-    &__contacts {
-        width: 100%;
-        height: 2.8rem;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        background-color: #f0f2f4;
-        box-shadow: 0px 1px 0 0 #e2e2e2;
+  &__contacts {
+    width: 100%;
+    height: 2.8rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #f0f2f4;
+    box-shadow: 0px 1px 0 0 #e2e2e2;
+    font-size: 1rem;
+
+    @media ($tablet) {
+      height: 4rem;
+      justify-content: flex-end;
+      align-items: flex-end;
+      font-size: 1.5rem;
+    }
+
+    @media ($desktop) {
+      height: 5.6rem;
+    }
+
+    .fas {
+      font-size: 1.4rem;
+      color: $mainBlack;
+
+      @media ($tablet) {
+        font-size: 2.4rem;
+      }
+    }
+
+    &_phone {
+      display: inherit;
+      align-items: center;
+      padding-right: 0.5rem;
+      padding-right: calc((100% - 6rem - 10rem - 2rem) / 7);
+      gap: 0.8rem;
+      flex-shrink: 1;
+      border-right: 0.1rem solid rgba($color: #e2e2e2, $alpha: 1);
+      color: $mainBlack;
+      font-family: $mainFont;
+
+      @media ($tablet) {
+        margin-right: 2rem;
+        margin-bottom: 0.6rem;
+        padding-right: 1.9rem;
+      }
+
+      @media ($desktop) {
+        margin-right: 2rem;
+        margin-bottom: 1.2rem;
+        padding-right: 1.9rem;
+      }
+    }
+
+    &_email {
+      display: inherit;
+      align-items: center;
+      gap: 0.8rem;
+      flex-shrink: 1;
+      color: $mainBlack;
+      font-family: $mainFont;
+
+      @media ($tablet) {
+        margin-right: 1.2rem;
+        margin-bottom: 0.6rem;
+      }
+
+      @media ($desktop) {
+        margin-right: 1.2rem;
+        margin-bottom: 1.2rem;
+      }
+    }
+
+    &_social {
+      width: 2rem;
+      height: 2rem;
+      background-color: #1287bf;
+      border-radius: 0.3rem;
+      display: inherit;
+      justify-content: center;
+      flex-shrink: 0;
+
+      @media ($tablet) {
+        width: 2.6rem;
+        height: 2.6rem;
+        margin-right: 9rem;
+        margin-bottom: 0.6rem;
+      }
+
+      @media ($desktop) {
+        margin-right: 19rem;
+        margin-bottom: 1.2rem;
+      }
+
+      &-icon {
+        margin-top: calc((100% - 1.5rem) / 2);
+        font-family: $socIco;
+        text-decoration: none;
+        font-size: 2rem;
+        color: $mainWhite;
+
+        @media ($tablet) {
+          margin-top: calc((100% - 1.9rem) / 2);
+          font-size: 2.6rem;
+        }
+      }
+    }
+  }
+
+  &__title {
+    width: 100%;
+    height: 10.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+
+    @media ($tablet) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @media ($desktop) {
+      height: 13rem;
+    }
+
+    .logo {
+      display: flex;
+      margin-left: 1rem;
+      margin-top: 1rem;
+
+      @media ($tablet) {
+        margin-left: 9rem;
+        margin-top: 0;
+      }
+
+      @media ($desktop) {
+        margin-left: 19rem;
+      }
+
+      &__icon {
+        .fas {
+          @include fontAwesome(3.7rem, $mainRed);
+
+          @media ($tablet) {
+            font-size: 4.7rem;
+          }
+
+          @media ($desktop) {
+            font-size: 5.7rem;
+          }
+        }
+
+        margin-right: 0.5rem;
+
+        @media ($tablet) {
+          margin-right: 1rem;
+        }
+      }
+
+      &__title {
+        @include titleText(2rem, $mainBlack);
+        text-transform: capitalize;
+
+        @media ($tablet) {
+          font-size: 2.7rem;
+        }
+
+        @media ($desktop) {
+          font-size: 3.7rem;
+        }
+      }
+
+      &__text {
+        @extend %smallTitle;
         font-size: 1rem;
 
         @media ($tablet) {
-            height: 4rem;
-            justify-content: flex-end;
-            align-items: flex-end;
-            font-size: 1.5rem;
+          font-size: 1.2rem;
         }
 
         @media ($desktop) {
-            height: 5.6rem;
+          font-size: 1.5rem;
         }
+      }
+    }
+  }
 
-        .fas {
-            font-size: 1.4rem;
-            color: $mainBlack;
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
 
-            @media ($tablet) {
-                font-size: 2.4rem;
-            }
-        }
-
-        &_phone {
-            display: inherit;
-            align-items: center;
-            gap: 0.8rem;
-            flex-shrink: 1;
-            border-right: 0.1rem solid rgba($color: #e2e2e2, $alpha: 1);
-            color: $mainBlack;
-            font-family: $mainFont;
-
-            @media ($tablet) {
-                margin-right: 2rem;
-                margin-bottom: 0.6rem;
-                padding-right: 1.9rem;
-            }
-
-            @media ($desktop) {
-                margin-right: 2rem;
-                margin-bottom: 1.2rem;
-                padding-right: 1.9rem;
-            }
-        }
-
-        &_email {
-            display: inherit;
-            align-items: center;
-            gap: 0.8rem;
-            flex-shrink: 1;
-            color: $mainBlack;
-            font-family: $mainFont;
-
-            @media ($tablet) {
-                margin-right: 1.2rem;
-                margin-bottom: 0.6rem;
-            }
-
-            @media ($desktop) {
-                margin-right: 1.2rem;
-                margin-bottom: 1.2rem;
-            }
-        }
-
-        &_social {
-            width: 2rem;
-            height: 2rem;
-            background-color: #1287bf;
-            border-radius: 0.3rem;
-            display: inherit;
-            justify-content: center;
-            flex-shrink: 0;
-
-            @media ($tablet) {
-                width: 2.6rem;
-                height: 2.6rem;
-                margin-right: 9rem;
-                margin-bottom: 0.6rem;
-            }
-
-            @media ($desktop) {
-                margin-right: 19rem;
-                margin-bottom: 1.2rem;
-            }
-
-            &-icon {
-                margin-top: calc((100% - 1.5rem) / 2);
-                font-family: $socIco;
-                text-decoration: none;
-                font-size: 2rem;
-                color: $mainWhite;
-
-                @media ($tablet) {
-                    margin-top: calc((100% - 1.9rem) / 2);
-                    font-size: 2.6rem;
-                }
-            }
-        }
+    @media ($tablet) {
+      gap: 2.2rem;
+      flex-direction: row;
     }
 
-    &__title {
-        width: 100%;
-        height: 10.5rem;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        align-items: center;
-        justify-content: flex-start;
-
-        @media ($tablet) {
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-        @media ($desktop) {
-            height: 13rem;
-
-        }
-
-        .logo {
-            display: flex;
-            margin-left: 1rem;
-            margin-top: 1rem;
-
-            @media ($tablet) {
-                margin-left: 9rem;
-                margin-top: 0;
-            }
-
-            @media ($desktop) {
-                margin-left: 19rem;
-
-            }
-
-            &__icon {
-                .fas {
-                    @include fontAwesome(3.7rem, $mainRed);
-
-                    @media ($tablet) {
-                        font-size: 4.7rem;
-                    }
-
-                    @media ($desktop) {
-                        font-size: 5.7rem;
-                    }
-                }
-
-                margin-right: .5rem;
-
-                @media ($tablet) {
-                    margin-right: 1rem;
-                }
-
-            }
-
-            &__title {
-                @include titleText(2rem, $mainBlack);
-                text-transform: capitalize;
-
-                @media ($tablet) {
-                    font-size: 2.7rem;
-                }
-
-                @media ($desktop) {
-                    font-size: 3.7rem;
-                }
-            }
-
-            &__text {
-                @extend %smallTitle;
-                font-size: 1rem;
-
-                @media ($tablet) {
-                    font-size: 1.2rem;
-                }
-
-                @media ($desktop) {
-                    font-size: 1.5rem;
-                }
-            }
-        }
+    @media ($desktop) {
+      gap: 3.2rem;
     }
 
-    .navigation {
+    &__menu {
+      &_list {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: .5rem;
+        flex-direction: row;
+        gap: 2.5rem;
+        padding: 0;
 
         @media ($tablet) {
-            gap: 2.2rem;
-            flex-direction: row;
+          gap: 3rem;
+          padding-left: 4rem;
         }
 
         @media ($desktop) {
-            gap: 3.2rem;
+          gap: 3rem;
         }
 
-        &__menu {
-            &_list {
-                display: flex;
-                flex-direction: row;
-                gap: 2.5rem;
+        li {
+          @extend %smallTitle;
+          font-size: 1.1rem;
+          color: $mainBlack;
+          text-transform: capitalize;
+          font-weight: bold;
+          &::marker {
+            color: $mainBlack;
+          }
+          &:first-child {
+            list-style: none;
+          }
 
-                @media ($tablet) {
-                    gap: 3rem;
-                }
-
-                @media ($desktop) {
-                    gap: 3rem;
-                }
-
-                li {
-                    @extend %smallTitle;
-                    font-size: 1.1rem;
-                    color: $mainBlack;
-                    text-transform: capitalize;
-                    font-weight: bold;
-
-                    @media ($tablet) {
-                        font-size: 1.3rem;
-                    }
-
-                    @media ($desktop) {
-                        font-size: 1.5rem;
-                    }
-
-                    &:hover {
-                        cursor: pointer;
-                        color: $mainRed;
-                        list-style: none;
-                    }
-                }
-            }
-        }
-
-        &__btn {
-            width: 13rem;
-            height: 2.6rem;
-            border-radius: 0.4rem;
-            background-color: $mainRed;
-            color: $mainWhite;
-            text-align: center;
-            @extend %smallTitle;
+          @media ($tablet) {
             font-size: 1.3rem;
-            text-transform: capitalize;
-            font-weight: bold;
-            padding: 0.4rem;
-            margin-right: 1rem;
+          }
 
-            @media ($tablet) {
-                width: 17.1rem;
-                height: 3.6rem;
-                font-size: 1.5rem;
-                padding: 0.9rem;
-                margin-right: 9rem;
-            }
+          @media ($desktop) {
+            font-size: 1.5rem;
+          }
 
-            @media ($desktop) {
-                width: 17.1rem;
-                height: 3.6rem;
-                font-size: 1.5rem;
-                margin-right: 19rem;
-            }
-
-            &:hover {
-                cursor: pointer;
-                box-shadow: 2px 2px 10px $mainGrey;
-            }
+          &:hover {
+            cursor: pointer;
+            color: $mainRed;
+            // list-style: none;
+          }
         }
+      }
     }
 
-    .title {
-        width: 100%;
-        height: 29rem;
-        // background-image: url("../images/layer-32.webp");
-        background: url("../images/layer-32.webp");
-        background-size: cover;
+    &__btn {
+      width: 13rem;
+      height: 2.6rem;
+      border-radius: 0.4rem;
+      background-color: $mainRed;
+      color: $mainWhite;
+      text-align: center;
+      @extend %smallTitle;
+      font-size: 1.3rem;
+      text-transform: capitalize;
+      font-weight: bold;
+      padding: 0.4rem;
+      margin-right: 1rem;
+
+      @media ($tablet) {
+        width: 17.1rem;
+        height: 3.6rem;
+        font-size: 1.5rem;
+        padding: 0.9rem;
+        margin-right: 9rem;
+      }
+
+      @media ($desktop) {
+        width: 17.1rem;
+        height: 3.6rem;
+        font-size: 1.5rem;
+        margin-right: 19rem;
+      }
+
+      &:hover {
+        cursor: pointer;
+        box-shadow: 2px 2px 10px $mainGrey;
+      }
+    }
+  }
+
+  .title {
+    width: 100%;
+    height: 29rem;
+    background: url('../images/layer-32.webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media ($tablet) {
+      height: 42rem;
+    }
+
+    @media ($desktop) {
+      height: 59rem;
+    }
+    &__header {
+      @include titleText(3.8rem, $mainWhite);
+      margin-top: 5rem;
+
+      @media ($tablet) {
+        font-size: 4.3rem;
+        margin-top: 10rem;
+      }
+
+      @media ($desktop) {
+        font-size: 4.8rem;
+        margin-top: 17.6rem;
+      }
+
+      &_text {
+        @include titleText(2rem, $mainWhite);
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 2rem;
 
         @media ($tablet) {
-            height: 42rem;
+          font-size: 2.5rem;
+          margin-bottom: 2.6rem;
         }
 
         @media ($desktop) {
-            height: 59rem;
+          font-size: 3rem;
+          margin-bottom: 3.2rem;
         }
+      }
+
+      &_btn {
+        width: 19rem;
+        height: 4rem;
+        padding: 1.2rem 2.5rem;
+        border-radius: 0.5rem;
+        @include titleText(1.4rem, $mainWhite);
+        text-transform: uppercase;
+        font-weight: bold;
+        background-color: $btnYellow;
+        @media ($tablet) {
+          width: 26rem;
+          height: 5.4rem;
+          padding: 1.6rem 3.5rem;
+          font-size: 1.9rem;
+        }
+
+        @media ($desktop) {
+          width: 33rem;
+          height: 6.9rem;
+          padding: 2.2rem 4.5rem;
+          font-size: 2.4rem;
+        }
+
+        &:hover {
+          cursor: pointer;
+          box-shadow: 2px 2px 10px $mainGrey;
+        }
+      }
     }
+  }
 }
