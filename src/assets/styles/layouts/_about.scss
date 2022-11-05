@@ -4,6 +4,23 @@
   align-items: center;
   min-height: 54.2rem;
 
+  &__title {
+    display: inherit;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+
+    @media ($tablet) {
+      margin-top: 3rem;
+    }
+
+    @media ($desktop) {
+      margin-top: 10rem;
+    }
+
+
+  }
+
   &__features {
     display: inherit;
     flex-direction: column;

@@ -1,4 +1,22 @@
 .approch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     min-height: 140.7rem;
     background-color: #f3f3f3;
+
+    &__title {
+        display: inherit;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1.5rem;
+
+        @media ($tablet) {
+            margin-top: 3rem;
+        }
+
+        @media ($desktop) {
+            margin-top: 9rem;
+        }
+    }
 }
