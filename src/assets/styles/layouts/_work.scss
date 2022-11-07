@@ -1,17 +1,17 @@
-.approch {
+.work {
     display: flex;
     width: 100%;
     flex-direction: column;
     align-items: center;
-    height: 95rem;
-    background-color: #f3f3f3;
+    height: 55rem;
+    background-color: $mainRed;
 
     @media ($tablet) {
-        height: 113.7rem;
+        height: 70rem;
     }
 
     @media ($desktop) {
-        height: 140.7rem;
+        height: 87rem;
     }
 
     &__title {
@@ -31,26 +31,11 @@
     }
 
     &__features {
-        width: 100%;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 5rem;
 
-    }
-
-    &__item {
-        margin-top: 4rem;
-        height: auto;
-        // transform: scale(70%);
-
-        @media ($tablet) {
-            // transform: scale(80%);
-
-        }
-
-        @media ($desktop) {
-            margin-top: 4rem;
-            // transform: scale(100%);
-        }
     }
 }

@@ -1,5 +1,6 @@
 .about,
-.approch {
+.approch,
+.work {
     &__title {
         &_header {
             @include titleText(2.4rem);
@@ -41,6 +42,20 @@
                 height: 0.5rem;
                 margin-top: 1.4rem;
             }
+        }
+    }
+}
+
+.work {
+    &__title {
+
+        &_header,
+        &_text {
+            color: $mainWhite;
+        }
+
+        &_line {
+            background-color: $mainWhite;
         }
     }
 }
