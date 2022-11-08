@@ -1,0 +1,108 @@
+.feedback {
+  .modal {
+    width: 68.3rem;
+    height: 44.6rem;
+    background-color: $mainWhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    border-radius: 0.4rem;
+
+    &__arrow {
+      background-color: $mainWhite;
+      display: flex;
+      width: 4.5rem;
+      height: 4.5rem;
+      position: absolute;
+      transform: rotate(45deg);
+      left: calc(50% - 3rem);
+      top: -2rem;
+    }
+
+    &__close-btn {
+      position: absolute;
+      left: 68.3rem - 2.25rem;
+      top: -2.25rem;
+      width: 4.5rem;
+      height: 4.5rem;
+      background-color: $mainRed;
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      border: 0.2rem solid $mainWhite;
+      border-radius: 50%;
+
+      p {
+        font-size: 3.2rem;
+        color: $mainWhite;
+        font-family: $mainFont;
+        font-weight: 300;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &__text {
+      font-size: 1.5rem;
+      color: $thirdGrey;
+      font-family: $mainFont;
+      text-align: center;
+      line-height: 1.47;
+      width: 55.4rem;
+      height: 3.8rem;
+      word-break: break-all;
+    }
+
+    .callback {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 44.4rem;
+      height: 25.5rem;
+
+      input {
+        height: 5rem;
+        width: 44.3rem;
+        margin-bottom: 1rem;
+        border: solid 1px #d8d8d8;
+        border-radius: 0.3rem;
+        font-family: $mainFont;
+        font-size: 1.4rem;
+        text-transform: capitalize;
+        padding-left: 2.2rem;
+        &:focus {
+          // border: 1px solid rgba($color: #1287bf, $alpha: 0.6);
+          // border-color: rgba($color: #1287bf, $alpha: 0.6);
+          outline: 1px solid rgba($color: #1287bf, $alpha: 0.8);
+          box-shadow: 0rem 0rem 0.5rem #1287bf;
+        }
+
+        &::placeholder {
+          color: rgba($lightGrey, 0.8);
+          //   padding-left: 2rem;
+        }
+
+        &:last-child {
+          height: 4.6rem;
+          width: 16.1rem;
+          margin-top: 2.7rem;
+          background-color: $mainRed;
+          color: $mainWhite;
+          text-transform: uppercase;
+          font-size: 1.5rem;
+          font-weight: bold;
+          font-family: $mainFont;
+          border-radius: 0.3rem;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,136 +1,142 @@
 .approch {
-    &__item {
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    // justify-content: space-between;
+    justify-content: flex-start;
+    width: 80%;
+    max-height: 23.6rem;
+    background-color: $mainWhite;
+    border-radius: 0.4rem;
+    @media ($tablet) {
+      width: 75%;
+    }
+    &:nth-child(even) {
+      flex-direction: row-reverse;
 
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        // justify-content: space-between;
-        justify-content: flex-start;
-        width: 75%;
-        max-height: 23.6rem;
-        background-color: $mainWhite;
-        border-radius: 0.4rem;
+      .step__title {
+        margin-right: 1.5rem;
+        text-align: right;
+      }
 
-        &:nth-child(even) {
-            flex-direction: row-reverse;
+      .step__title_text {
+        text-align: right;
+        margin-right: 1.2rem;
+      }
+    }
 
-            .step__title {
-                margin-right: 1.5rem;
-                text-align: right;
-            }
+    &_img {
+      width: 20rem;
 
-            .step__title_text {
-                text-align: right;
-                margin-right: 1.2rem;
+      @media ($tablet) {
+        width: 28.9rem;
+      }
 
-            }
+      @media ($desktop) {
+        width: 33.9rem;
+        height: 23.6rem;
+      }
+    }
+
+    &_text {
+      max-height: 10rem;
+      min-height: 5rem;
+      margin-right: 3rem;
+      @media ($tablet) {
+        margin-right: 5rem;
+      }
+      @media ($desktop) {
+        margin-right: 7.2rem;
+      }
+
+      .step__title {
+        @extend %smallTitle;
+        font-size: 1.4rem;
+        color: $mainBlack;
+        margin-left: 5rem;
+
+        @media ($tablet) {
+          font-size: 1.6rem;
+          margin-left: 7rem;
         }
 
-        &_img {
-            width: 23.9rem;
-
-
-            @media ($tablet) {
-                width: 28.9rem;
-            }
-
-            @media ($desktop) {
-                width: 33.9rem;
-                height: 23.6rem;
-            }
+        @media ($desktop) {
+          font-size: 1.8rem;
         }
 
         &_text {
-            max-height: 10rem;
-            min-height: 9rem;
-            margin-right: 7.2rem;
+          height: 5.5rem;
+          // max-width: 52rem;
+          max-width: 100%;
+          overflow: hidden;
+          font-family: $articleFont;
+          color: $secondGrey;
+          font-size: 1rem;
+          margin-left: 5rem;
 
-            .step__title {
-                @extend %smallTitle;
-                font-size: 1.4rem;
-                color: $mainBlack;
-                margin-left: 7rem;
+          @media ($tablet) {
+            font-size: 1.2rem;
+            height: 7rem;
+            margin-left: 7rem;
+          }
 
-                @media ($tablet) {
-                    font-size: 1.6rem;
-                }
-
-                @media ($desktop) {
-                    font-size: 1.8rem;
-                }
-
-                &_text {
-                    height: 5rem;
-                    // max-width: 52rem;
-                    max-width: 100%;
-                    overflow: hidden;
-                    font-family: $articleFont;
-                    color: $secondGrey;
-                    font-size: 1rem;
-                    margin-left: 7rem;
-
-                    @media ($tablet) {
-                        font-size: 1.2rem;
-                        height: 6rem;
-                    }
-
-                    @media ($desktop) {
-                        font-size: 1.4rem;
-                    }
-
-                }
-            }
-
-            h4 {
-                font-weight: bold;
-                margin-bottom: 1.3rem;
-            }
+          @media ($desktop) {
+            font-size: 1.4rem;
+            height: 8rem;
+          }
         }
+      }
 
-        &_step {
-            position: absolute;
-            // left: 28.8rem;
-            margin-left: 18.8rem;
-            margin-right: 19rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 10.1rem;
-            height: 10.1rem;
-            transform: scale(70%);
-            background-color: $mainRed;
-            border: 2px solid $mainWhite;
-            border-radius: 0.5rem;
-
-            @media ($tablet) {
-                transform: scale(80%);
-                margin-left: 23.8rem;
-                margin-right: 24rem;
-            }
-
-            @media ($desktop) {
-                transform: scale(100%);
-                margin-left: 28.8rem;
-                margin-right: 29rem;
-            }
-
-            .counter__title {
-                font-family: $countFont;
-                font-size: 6rem;
-                font-weight: 300;
-                color: $mainWhite;
-
-            }
-
-            p {
-                @extend %smallTitle;
-                font-family: $countFont;
-                font-size: 2rem;
-                color: $mainWhite;
-                transform: translateY(-1.5rem);
-            }
-        }
+      h4 {
+        font-weight: bold;
+        margin-bottom: 1.3rem;
+      }
     }
+
+    &_step {
+      position: absolute;
+      // left: 28.8rem;
+      margin-left: 14.8rem;
+      margin-right: 15rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 10.1rem;
+      height: 10.1rem;
+      transform: scale(60%);
+      background-color: $mainRed;
+      border: 2px solid $mainWhite;
+      border-radius: 0.5rem;
+
+      @media ($tablet) {
+        transform: scale(80%);
+        margin-left: 23.8rem;
+        margin-right: 24rem;
+      }
+
+      @media ($desktop) {
+        transform: scale(100%);
+        margin-left: 28.8rem;
+        margin-right: 29rem;
+      }
+
+      .counter__title {
+        font-family: $countFont;
+        font-size: 6rem;
+        font-weight: 300;
+        color: $mainWhite;
+      }
+
+      p {
+        @extend %smallTitle;
+        font-family: $countFont;
+        font-size: 2rem;
+        color: $mainWhite;
+        transform: translateY(-1.5rem);
+      }
+    }
+  }
 }
