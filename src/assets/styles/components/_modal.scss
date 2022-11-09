@@ -56,7 +56,6 @@
 
       @media ($desktop) {
         left: calc(100% - 2.25rem);
-
       }
 
       p {
@@ -86,17 +85,15 @@
       font-family: $mainFont;
       text-align: center;
       line-height: 1.47;
-      width: 32.4rem;
+      width: 80.5%;
       height: 3.8rem;
       word-break: break-all;
 
       @media ($tablet) {
-        width: 45.4rem;
         height: 3.8rem;
       }
 
       @media ($desktop) {
-        width: 55.4rem;
         height: 3.8rem;
       }
     }
@@ -111,7 +108,7 @@
 
       input {
         height: 5rem;
-        width: 31.3rem;
+        width: 80%;
         margin-bottom: 1rem;
         border: solid 1px #d8d8d8;
         border-radius: 0.3rem;
@@ -121,13 +118,12 @@
         padding-left: 2.2rem;
 
         @media ($tablet) {
-          width: 39.3rem;
+          width: 70%;
           padding-left: 2.2rem;
         }
 
         @media ($desktop) {
-          width: 44.3rem;
-          padding-left: 2.2rem;
+          width: 65%;
         }
 
         &:focus {

@@ -1,7 +1,132 @@
 .footer {
-    &__social {
-        background-color: $footerBackground;
-        height: 49rem;
-
+  &__social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // width: 100%;
+    height: 49rem;
+    background-color: $footerBackground;
+    &_header {
+      margin-top: 9rem;
+      h2 {
+        @include titleText(2.9rem, $mainWhite);
+      }
     }
+    &_icons {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin-top: 3rem;
+      width: 70%;
+
+      @media ($tablet) {
+        width: 50%;
+      }
+      @media ($desktop) {
+        width: 18.5%;
+      }
+      &-item {
+        width: 4.5rem;
+        height: 4.5rem;
+        padding: 1rem 0.6rem;
+        border-radius: 0.4rem;
+        border: solid 2px #515151;
+        background-color: #2a2a2a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p {
+          font-family: $socIco;
+          color: $mainWhite;
+          font-size: 3rem;
+        }
+
+        &:hover {
+          border-color: $mainRed;
+          cursor: pointer;
+        }
+      }
+    }
+    &_article {
+      margin-top: 3.8rem;
+      width: auto;
+      text-align: center;
+      p {
+        font-family: $articleFont;
+        font-size: 1.4rem;
+        color: $mainWhite;
+      }
+    }
+    &_form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      &-input {
+        margin-top: 3rem;
+        // width: 683px;
+        width: 80%;
+        height: 54px;
+        background-color: #515151;
+        border: none;
+        border-radius: 0.2rem;
+        padding-left: 2.2rem;
+        font-family: $articleFont;
+        font-size: 1.6rem;
+        color: $mainWhite;
+        outline: none;
+        &:focus {
+          // border: 1px solid rgba($color: #1287bf, $alpha: 0.6);
+          // border-color: rgba($color: #1287bf, $alpha: 0.6);
+          outline: 1px solid rgba($color: $mainRed, $alpha: 0.8);
+          box-shadow: 0rem 0rem 0.5rem $mainRed;
+        }
+        &::placeholder {
+          color: #cecece;
+          font-family: $articleFont;
+          font-size: 1.4rem;
+          opacity: 0.8;
+          text-transform: capitalize;
+        }
+        @media ($tablet) {
+          width: 60%;
+        }
+        @media ($desktop) {
+          width: 48%;
+        }
+      }
+
+      &-btn {
+        width: 149px;
+        height: 49px;
+        border-radius: 0.4rem;
+        border: solid 2px #515151;
+        background-color: #2a2a2a;
+        font-family: $mainFont;
+        color: $mainWhite;
+        text-transform: capitalize;
+        font-size: 1.7rem;
+        margin-top: 3rem;
+        &:hover {
+          cursor: pointer;
+          border-color: $mainRed;
+          box-shadow: 0rem 0rem 0.5rem $mainRed;
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    height: 6.7rem;
+    background-color: $copyrightColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+      font-family: $articleFont;
+      font-size: 1.4rem;
+      color: #cecece;
+      text-align: center;
+    }
+  }
 }
